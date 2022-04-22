@@ -488,14 +488,14 @@ public class GuillotineBinPack {
 	int ScoreBestShortSideFit(int width, int height, Rect freeRect) {
 		int leftoverHoriz = abs(freeRect.width - width);
 		int leftoverVert = abs(freeRect.height - height);
-		int leftover = min(leftoverHoriz, leftoverVert);
+		int leftover = Math.min(leftoverHoriz, leftoverVert);
 		return leftover;
 	}
 
 	int ScoreBestLongSideFit(int width, int height, Rect freeRect) {
 		int leftoverHoriz = abs(freeRect.width - width);
 		int leftoverVert = abs(freeRect.height - height);
-		int leftover = max(leftoverHoriz, leftoverVert);
+		int leftover = Math.max(leftoverHoriz, leftoverVert);
 		return leftover;
 	}
 

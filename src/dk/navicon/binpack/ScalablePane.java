@@ -12,14 +12,14 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.JPanel;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import dk.navicon.binpack.logging.Logger;
+import dk.navicon.binpack.logging.LoggerFactory;
 
 public class ScalablePane extends JPanel {
 
 	private static final Logger log = LoggerFactory
 			.getLogger(ScalablePane.class);
-
+	
 	public Image master;
 
 	private boolean toFit;

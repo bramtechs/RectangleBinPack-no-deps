@@ -10,8 +10,8 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import dk.navicon.binpack.logging.Logger;
+import dk.navicon.binpack.logging.LoggerFactory;
 
 public class TestMasoneryLayout {
 

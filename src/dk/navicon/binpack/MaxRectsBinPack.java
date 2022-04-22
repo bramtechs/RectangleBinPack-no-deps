@@ -361,8 +361,8 @@ public class MaxRectsBinPack {
 					&& freeRectangles.get(i).height >= height) {
 				int leftoverHoriz = abs(freeRectangles.get(i).width - width);
 				int leftoverVert = abs(freeRectangles.get(i).height - height);
-				int shortSideFit = min(leftoverHoriz, leftoverVert);
-				int longSideFit = max(leftoverHoriz, leftoverVert);
+				int shortSideFit = Math.min(leftoverHoriz, leftoverVert);
+				int longSideFit = Math.max(leftoverHoriz, leftoverVert);
 
 				if (shortSideFit < bestShortSideFit.get()
 						|| (shortSideFit == bestShortSideFit.get() && longSideFit < bestLongSideFit
@@ -382,9 +382,9 @@ public class MaxRectsBinPack {
 						- height);
 				int flippedLeftoverVert = abs(freeRectangles.get(i).height
 						- width);
-				int flippedShortSideFit = min(flippedLeftoverHoriz,
+				int flippedShortSideFit = Math.min(flippedLeftoverHoriz,
 						flippedLeftoverVert);
-				int flippedLongSideFit = max(flippedLeftoverHoriz,
+				int flippedLongSideFit = Math.max(flippedLeftoverHoriz,
 						flippedLeftoverVert);
 
 				if (flippedShortSideFit < bestShortSideFit.get()
@@ -417,8 +417,8 @@ public class MaxRectsBinPack {
 					&& freeRectangles.get(i).height >= height) {
 				int leftoverHoriz = abs(freeRectangles.get(i).width - width);
 				int leftoverVert = abs(freeRectangles.get(i).height - height);
-				int shortSideFit = min(leftoverHoriz, leftoverVert);
-				int longSideFit = max(leftoverHoriz, leftoverVert);
+				int shortSideFit = Math.min(leftoverHoriz, leftoverVert);
+				int longSideFit = Math.max(leftoverHoriz, leftoverVert);
 
 				if (longSideFit < bestLongSideFit.get()
 						|| (longSideFit == bestLongSideFit.get() && shortSideFit < bestShortSideFit
@@ -436,8 +436,8 @@ public class MaxRectsBinPack {
 					&& freeRectangles.get(i).height >= width) {
 				int leftoverHoriz = abs(freeRectangles.get(i).width - height);
 				int leftoverVert = abs(freeRectangles.get(i).height - width);
-				int shortSideFit = min(leftoverHoriz, leftoverVert);
-				int longSideFit = max(leftoverHoriz, leftoverVert);
+				int shortSideFit = Math.min(leftoverHoriz, leftoverVert);
+				int longSideFit = Math.max(leftoverHoriz, leftoverVert);
 
 				if (longSideFit < bestLongSideFit.get()
 						|| (longSideFit == bestLongSideFit.get() && shortSideFit < bestShortSideFit
@@ -473,7 +473,7 @@ public class MaxRectsBinPack {
 					&& freeRectangles.get(i).height >= height) {
 				int leftoverHoriz = abs(freeRectangles.get(i).width - width);
 				int leftoverVert = abs(freeRectangles.get(i).height - height);
-				int shortSideFit = min(leftoverHoriz, leftoverVert);
+				int shortSideFit = Math.min(leftoverHoriz, leftoverVert);
 
 				if (areaFit < bestAreaFit.get()
 						|| (areaFit == bestAreaFit.get() && shortSideFit < bestShortSideFit
@@ -491,7 +491,7 @@ public class MaxRectsBinPack {
 					&& freeRectangles.get(i).height >= width) {
 				int leftoverHoriz = abs(freeRectangles.get(i).width - height);
 				int leftoverVert = abs(freeRectangles.get(i).height - width);
-				int shortSideFit = min(leftoverHoriz, leftoverVert);
+				int shortSideFit = Math.min(leftoverHoriz, leftoverVert);
 
 				if (areaFit < bestAreaFit.get()
 						|| (areaFit == bestAreaFit.get() && shortSideFit < bestShortSideFit
@@ -513,7 +513,7 @@ public class MaxRectsBinPack {
 	int CommonIntervalLength(int i1start, int i1end, int i2start, int i2end) {
 		if (i1end < i2start || i2end < i1start)
 			return 0;
-		return min(i1end, i2end) - max(i1start, i2start);
+		return Math.min(i1end, i2end) - Math.max(i1start, i2start);
 	}
 
 	int ContactPointScoreNode(int x, int y, int width, int height) {

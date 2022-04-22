@@ -127,12 +127,8 @@ public class GuiTest {
 				out.printf("Failed! Could not find a proper position to pack this rectangle into. Skipping this one.\n");
 		}
 		out.printf("Done. All rectangles packed.\n");
-
-		invokeLater(new Runnable() {
-			public void run() {
-				createAndShowGUI();
-			}
-		});
+		
+		createAndShowGUI();
 	}
 
 }
