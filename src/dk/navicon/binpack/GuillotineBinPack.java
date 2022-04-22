@@ -153,13 +153,13 @@ public class GuillotineBinPack {
 	// void SplitFreeRectAlongAxis( Rect &freeRect, Rect &placedRect, boolean
 	// splitHorizontal);
 
-	GuillotineBinPack() {
+	public GuillotineBinPack() {
 		binWidth = 0;
 		binHeight = 0;
 
 	}
 
-	GuillotineBinPack(int width, int height) {
+	public GuillotineBinPack(int width, int height) {
 		Init(width, height);
 	}
 
