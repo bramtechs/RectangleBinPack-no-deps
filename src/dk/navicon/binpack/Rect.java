@@ -1,10 +1,10 @@
 package dk.navicon.binpack;
 
 public class Rect {
-	int x;
-	int y;
-	int width;
-	int height;
+	public int x;
+	public int y;
+	public int width;
+	public int height;
 
 	public Rect() {
 	}
