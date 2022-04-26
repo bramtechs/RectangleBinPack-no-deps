@@ -1,6 +1,6 @@
 package dk.navicon.binpack;
 
-class Rect {
+public class Rect {
 	int x;
 	int y;
 	int width;
